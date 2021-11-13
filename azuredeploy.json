@@ -183,6 +183,10 @@
               "value": "dotnet"
             },
             {
+              "name": "Acmebot:AzureDns:SubscriptionId",
+              "value": "[variables('Acmebot:AzureDns:SubscriptionId')]"
+            },
+            {
               "name": "Acmebot:Contacts",
               "value": "[variables('mailAddress')]"
             },
