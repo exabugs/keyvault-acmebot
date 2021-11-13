@@ -2,6 +2,9 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "Acmebot:AzureDns:SubscriptionId": {
+      "type": "string"
+    },
     "appNamePrefix": {
       "type": "string",
       "maxLength": 14,
@@ -237,7 +240,12 @@
             "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('functionAppName')), '2020-06-01', 'Full').identity.principalId]",
             "tenantId": "[subscription().tenantId]",
             "permissions": {
-              "certificates": [ "get", "list", "create", "update" ]
+              "certificates": [
+                "get",
+                "list",
+                "create",
+                "update"
+              ]
             }
           }
         ],
