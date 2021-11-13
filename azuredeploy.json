@@ -184,7 +184,7 @@
             },
             {
               "name": "Acmebot:AzureDns:SubscriptionId",
-              "value": "[variables('Acmebot:AzureDns:SubscriptionId')]"
+              "value": "[parameters('Acmebot:AzureDns:SubscriptionId')]"
             },
             {
               "name": "Acmebot:Contacts",
